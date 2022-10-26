@@ -48,7 +48,7 @@
     width: 464px;
     height: 559px;
     border-radius: 24px;
-    background-color: white;
+    background-color: var(--color-title);
     grid-area: container;
 }
 .question-title {
@@ -111,22 +111,34 @@
     box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
     border-radius: 12px;
     line-height: 27px;
-    color: white;
+    color: var(--color-title);
+    cursor: url(./logo/pan_tool_alt_FILL0_wght400_GRAD0_opsz48.svg) 21 8, move;
 }
 .incorrect {
     background-color: var(--color-incorrect);
     border: 2px solid var(--color-incorrect);
-    color: white;
+    color: var(--color-title);
 }
 .correct {
     background-color: var(--color-correct);
     border: 2px solid var(--color-correct);
-    color: white;
+    color: var(--color-title);
 }
-/* .answer-A{
+.incorrectLogo {
     background-image: url('./logo/cancel_FILL0_wght400_GRAD0_opsz48.svg');
+    background-size: 20px;
     width: 20px;
     height: 20px;
-    object-fit: cover;
-} */
+    color: var(--color-title);
+    margin-left: 180px;
+}
+.correctLogo{
+    background-image: url('./logo/check_circle_FILL0_wght400_GRAD0_opsz48.svg');
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--color-title);
+    margin-left: 180px;
+
+}
 
