@@ -1,0 +1,82 @@
+:root {
+    --color-light: rgba(96, 102, 208, 0.7); 
+    --color-dark: #2F527B;
+    --color-title: #F2F2F2;
+    --color-select: #F9A826;
+    --color-correct: #60BF88;
+    --color-incorrect: #EA8282;
+}
+
+.main-container {
+    display: grid;
+    grid-template-areas: 
+        'title logo'
+        'container container';
+    place-content: center;
+    background-color:#ffd599;
+    background-image:
+    radial-gradient(at 6% 71%, hsla(212,61%,60%,1) 0px, transparent 50%),
+    radial-gradient(at 13% 70%, hsla(120,61%,79%,1) 0px, transparent 50%),
+    radial-gradient(at 13% 23%, hsla(9,64%,62%,1) 0px, transparent 50%),
+    radial-gradient(at 60% 44%, hsla(233,98%,77%,1) 0px, transparent 50%),
+    radial-gradient(at 25% 49%, hsla(239,79%,67%,1) 0px, transparent 50%),
+    radial-gradient(at 63% 99%, hsla(1,98%,73%,1) 0px, transparent 50%),
+    radial-gradient(at 30% 69%, hsla(58,84%,74%,1) 0px, transparent 50%);
+    height: 100vh;
+}
+.font {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+}
+.principal-title {
+    display: inline-block;
+    width: 271px;
+    height: 54px;
+    font-size: 36px;
+    line-height: 54px;
+    text-transform: uppercase;
+    color: var(--color-title);
+    grid-area: title;
+    place-self: center;
+    align-self: end;
+    margin: 0 0 10px 0;
+}
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    width: 464px;
+    height: 542px;
+    border-radius: 24px;
+    background-color: var(--color-title);
+    grid-area: container;
+    align-items: center;
+    justify-content: center;
+}
+.question-title {
+    width: 373px;
+    height: 36px;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--color-dark);
+    text-align: center;
+    align-self: center;
+    margin: 68px auto 32px auto;
+}
+.logo {
+    place-content: center;
+    width: 238px;
+}
+.nextButton {
+    align-self: end;
+    margin: 0 32px 10px 0;
+    height: 56px;
+    width: 116px;
+    background-color: var(--color-select);
+    border: none;
+    box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
+    border-radius: 12px;
+    line-height: 27px;
+    color: var(--color-title);
+    cursor: url(./logo/pan_tool_alt_FILL0_wght400_GRAD0_opsz48.svg) 21 8, move;
+}

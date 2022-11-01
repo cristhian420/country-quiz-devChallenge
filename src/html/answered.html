@@ -7,8 +7,8 @@
       content="width=device-width, initial-scale=1,
   maximum-scale=5"
     />
-    <link rel="stylesheet" href="./src/style.css">
-    <link rel="stylesheet" href="./src/normalize.css">
+    <link rel="stylesheet" href="../style/answered.css">
+    <link rel="stylesheet" href="../style/normalize.css">
     <link rel="icon" href="devchallenges.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,15 +27,16 @@
   <body>
     <main class="main-container">
       <h1 class="principal-title font">country quiz</h1>
-      <img src="./src/logo/undraw_adventure_4hum 1.svg" alt="a logo with a person next the globe" class="logo">
+      <img src="../logo/undraw_adventure_4hum 1.svg" alt="a logo with a person next the globe" class="logo">
       <div class="questions-container">
         <h2 class="question-title font">Kuala Lumpur is the capital of</h2>
         <div class="answer-container">
-          <div class="answer font"><span class="letter-A">A</span>Vietnam 🇻🇳<span class="answer-A"></span></div>
-          <div class="answer font"><span class="letter-B">B</span>Malaysia 🇲🇾<span class="answer-B"></span></div>
-          <div class="answer font"><span class="letter-C">C</span>Sweden 🇸🇪<span class="answer-C"></span></div>
-          <div class="answer font"><span class="letter-D">D</span>Austria 🇦🇹<span class="answer-D"></span></div>
+          <div class="answer font incorrect"><span class="letter-A">A</span>Vietnam 🇻🇳<span class="incorrectLogo"></span></div>
+          <div class="answer font correct"><span class="letter-B">B</span>Malaysia 🇲🇾<span class="correctLogo"></span></div>
+          <div class="answer font"><span class="letter-C">C</span>Sweden 🇸🇪<span></span></div>
+          <div class="answer font"><span class="letter-D">D</span>Austria 🇦🇹<span></span></div>
         </div>
+        <button class="nextButton font">Next</button>
       </div>
     </main>
   </body>
