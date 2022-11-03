@@ -5,8 +5,8 @@
     --color-select: #F9A826;
     --color-correct: #60BF88;
     --color-incorrect: #EA8282;
+    --background-containers: #FFFFFF ;
 }
-
 .main-container {
     display: grid;
     grid-template-areas: 
@@ -43,40 +43,52 @@
     margin: 0 0 10px 0;
 }
 .questions-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 2fr 2fr 1fr;
     width: 464px;
     height: 542px;
     border-radius: 24px;
-    background-color: var(--color-title);
+    background-color: var(--background-containers);
     grid-area: container;
-    align-items: center;
-    justify-content: center;
-}
-.question-title {
-    width: 373px;
-    height: 36px;
-    font-size: 24px;
-    line-height: 36px;
-    color: var(--color-dark);
-    text-align: center;
-    align-self: center;
-    margin: 68px auto 32px auto;
 }
 .logo {
     place-content: center;
     width: 238px;
+    justify-self: start;
+    margin: 48px auto 0 auto;
 }
-.nextButton {
-    align-self: end;
-    margin: 0 32px 10px 0;
-    height: 56px;
-    width: 116px;
-    background-color: var(--color-select);
-    border: none;
-    box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
-    border-radius: 12px;
+.question-title {
+    width: 181px;
+    height: 72px;
+    font-size: 48px;
+    line-height: 72px;
+    color: var(--color-dark);
+    text-align: center;
+    margin: 50px auto 0;
+}
+.question-p {
+    height: auto;
+    width: 249px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 300;
     line-height: 27px;
-    color: var(--color-title);
+    text-align: center;
+}
+.question-p > span {
+    color: var(--color-correct);
+    font-size: 38px;
+    font-weight: 700;
+}
+.tryAgainButton {
+    width: 209px;
+    height: 62px;
+    margin: 15px auto;
+    border: 2px solid #1D355D;
+    border-radius: 12px;
+    background-color: var(--background-containers);
+    line-height: 27px;
+    font-weight: 600;
+    color: var(--color-dark);
     cursor: url(./logo/pan_tool_alt_FILL0_wght400_GRAD0_opsz48.svg) 21 8, move;
 }

@@ -1,0 +1,47 @@
+commit f30c512f402b644e90e4c29404c9b8bec7cf77c0
+Author: Cristhian Salas <cristhian.sm91@gmail.com>
+Date:   Mon Oct 31 20:20:35 2022 -0600
+
+    [ADD] result.html v0.2.0
+
+commit 142c44fadb087288a525c03fb8aeddf2bba058e9
+Author: Cristhian Salas <cristhian.sm91@gmail.com>
+Date:   Tue Oct 25 23:52:54 2022 -0500
+
+    [ADD] correct and incorrect logos 0.1.1
+
+commit 49830c809437dee650cdf26fbe08de5243d64cd5
+Author: Cristhian Salas <cristhian.sm91@gmail.com>
+Date:   Tue Oct 25 20:27:25 2022 -0500
+
+    [ADD] answered.html 0.1.0
+
+commit 69fcc033fb85941a980ea71109a7e1c7f64b5f05
+Author: Cristhian Salas <cristhian.sm91@gmail.com>
+Date:   Tue Oct 25 20:27:07 2022 -0500
+
+    [ADD] answered.html 0.1.0
+
+commit 166a85e6bc53a29f232b4d44510f5ab0dc3d2ec7
+Author: Cristhian Salas <cristhian.sm91@gmail.com>
+Date:   Tue Oct 18 19:44:09 2022 -0500
+
+    add section: choose answer
+
+commit f64017ddfb1a54b33dcd59c0d4911325a0dcdf32
+Author: Cristhian Salas <cristhian.sm91@gmail.com>
+Date:   Tue Oct 18 00:09:11 2022 -0500
+
+    add .gitignore and make a structure for the documents
+
+commit cd073685316c2e2f346667c47d8330344f352fb8
+Author: Cristhian Salas <cristhian.sm91@gmail.com>
+Date:   Mon Oct 17 22:58:21 2022 -0500
+
+    initial commit
+
+commit 164e1b3842f50066b8fd64000f8b034d1bdf86b8
+Author: cristhian420 <102390059+cristhian420@users.noreply.github.com>
+Date:   Mon Oct 17 22:53:17 2022 -0500
+
+    Initial commit
