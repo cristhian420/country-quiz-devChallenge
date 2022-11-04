@@ -22,12 +22,33 @@ const fetchData = async (urlApi) => {
             question.correctAnswer
         ])
         .flat();
-        const randomAnswerShow = Math.floor(Math.random() * answers.length); 
-        console.log(randomAnswerShow)
+        const correctAnswer = questions.map(question => question.correctAnswer);
+        console.log(answers)
+        let answerShuffled = answers
+            .map(value => ({ value, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ value }) => value);
+        console.log(answerShuffled)
+        // const randomAnswerShow = Math.floor(Math.random() * answers.length); 
+        // console.log(randomAnswerShow);
         questionTitle.innerText = questions[0].question;
-        answerA.innerText = answers[randomAnswerShow];
-        // content.innerHTML = questions;
+        content.innerHTML = `
+        <div class="answer font"><span class="letter-A">A</span><span id="answer-A" class="answer-A">${answerShuffled[0]}</span></div>
+        <div class="answer font"><span class="letter-B">B</span><span id="answer-B" class="answer-B">${answerShuffled[1]}</span></div>
+        <div class="answer font"><span class="letter-C">C</span><span id="answer-C" class="answer-C">${answerShuffled[2]}</span></div>
+        <div class="answer font"><span class="letter-D">D</span><span id="answer-D" class="answer-D">${answerShuffled[3]}</span></div>
+        `;
+        console.log(correctAnswer)
+
     } catch {
 
     }
-})()
+})();
+
+answerA.addEventListener('click', comprobar)
+
+function comprobar(){
+    if(true){
+        console.log('hola')
+    }
+}
