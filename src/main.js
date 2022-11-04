@@ -16,7 +16,6 @@ const fetchData = async (urlApi) => {
 (async () => {
     try{
         const questions = await fetchData(APIGeography);
-        // console.log(questions)
         const answers = questions.map(question => [
             ...question.incorrectAnswers,
             question.correctAnswer
@@ -24,13 +23,8 @@ const fetchData = async (urlApi) => {
         .flat();
         const correctAnswer = questions.map(question => question.correctAnswer);
         console.log(answers)
-        let answerShuffled = answers
-            .map(value => ({ value, sort: Math.random() }))
-            .sort((a, b) => a.sort - b.sort)
-            .map(({ value }) => value);
+        let answerShuffled = answers.sort(() => Math.random()-0.5)
         console.log(answerShuffled)
-        // const randomAnswerShow = Math.floor(Math.random() * answers.length); 
-        // console.log(randomAnswerShow);
         questionTitle.innerText = questions[0].question;
         content.innerHTML = `
         <div class="answer font"><span class="letter-A">A</span><span id="answer-A" class="answer-A">${answerShuffled[0]}</span></div>
@@ -40,15 +34,7 @@ const fetchData = async (urlApi) => {
         `;
         console.log(correctAnswer)
 
-    } catch {
-
+    } catch (error) {
+        throw new Error(error)
     }
 })();
-
-answerA.addEventListener('click', comprobar)
-
-function comprobar(){
-    if(true){
-        console.log('hola')
-    }
-}
