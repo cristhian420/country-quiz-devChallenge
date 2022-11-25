@@ -111,7 +111,7 @@
     color: var(--color-title);
 }
 .incorrectLogo {
-    background-image: url('./logo/cancel_FILL0_wght400_GRAD0_opsz48.svg');
+    background-image: url('../logo/cancel_FILL0_wght400_GRAD0_opsz48.svg');
     background-size: 20px;
     width: 20px;
     height: 20px;
@@ -119,10 +119,23 @@
     margin-left: 180px;
 }
 .correctLogo{
-    background-image: url('./logo/check_circle_FILL0_wght400_GRAD0_opsz48.svg');
+    background-image: url('../logo/check_circle_FILL0_wght400_GRAD0_opsz48.svg');
     background-size: 20px;
     width: 20px;
     height: 20px;
     color: var(--color-title);
     margin-left: 180px;
+}
+.nextButton {
+    align-self: end;
+    margin: 0 32px 10px 0;
+    height: 56px;
+    width: 116px;
+    background-color: var(--color-select);
+    border: none;
+    box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
+    border-radius: 12px;
+    line-height: 27px;
+    color: var(--color-title);
+    cursor: url(./logo/pan_tool_alt_FILL0_wght400_GRAD0_opsz48.svg) 21 8, move;
 }
