@@ -6,8 +6,12 @@ const answer1 = document.getElementById('answer-1');
 const answer2 = document.getElementById('answer-2');
 const answer3 = document.getElementById('answer-3');
 const answer4 = document.getElementById('answer-4');
-const answer1Contaniner = document.getElementById('a1');
 const questionsContainer = document.querySelector('.questions-container');
+const answer1Contaniner = document.getElementById('answerCont1');
+const answer2Contaniner = document.getElementById('answerCont2');
+const answer3Contaniner = document.getElementById('answerCont3');
+const answer4Contaniner = document.getElementById('answerCont4');
+
 
 
 
@@ -39,26 +43,97 @@ const fetchData = async (urlApi) => {
         answer1Contaniner.addEventListener('mousedown', function isCorrect(){
             questionsContainer.style.height = '559px';
             const btn = document.createElement('button');
+            btn.innerText = 'Next'
+            btn.classList.add('nextButton', 'font');
             questionsContainer.insertAdjacentElement('beforeend', btn);
-            btn.classList.add('nextButton');
             const icon = document.createElement('span');
             answer1Contaniner.insertAdjacentElement('beforeend', icon);
 
-
             if(correctAnswer == answerShuffled[0]) {
-                answer1Contaniner.classList.add('correct');
-                icon.classList.add('correctLogo');
+                answer1Contaniner.classList.toggle('correct');
+                icon.classList.toggle('correctLogo');
             } else {
                 answer1Contaniner.classList.add('incorrect');
                 icon.classList.add('incorrectLogo');
                 answerShuffled.forEach(element => {
-                    if(correctAnswer == element){
-                        element.classList.add('correct');
-                    }
+                    // if(correctAnswer == element){
+                    //     element.classList.add('correct');
+                    // }
                 });
-                console.log(indx);
-            }
 
+            }
+        })
+
+        answer2Contaniner.addEventListener('mousedown', function isCorrect(){
+            questionsContainer.style.height = '559px';
+            const btn = document.createElement('button');
+            btn.innerText = 'Next'
+            btn.classList.add('nextButton', 'font');
+            questionsContainer.insertAdjacentElement('beforeend', btn);
+            const icon = document.createElement('span');
+            answer2Contaniner.insertAdjacentElement('beforeend', icon);
+
+            if(correctAnswer == answerShuffled[1]) {
+                answer2Contaniner.classList.toggle('correct');
+                icon.classList.toggle('correctLogo');
+            } else {
+                answer2Contaniner.classList.add('incorrect');
+                icon.classList.add('incorrectLogo');
+                answerShuffled.forEach(element => {
+                    // if(correctAnswer == element){
+                    //     element.classList.add('correct');
+                    // }
+                });
+
+            }
+        })
+
+        answer3Contaniner.addEventListener('mousedown', function isCorrect(){
+            questionsContainer.style.height = '559px';
+            const btn = document.createElement('button');
+            btn.innerText = 'Next'
+            btn.classList.add('nextButton', 'font');
+            questionsContainer.insertAdjacentElement('beforeend', btn);
+            const icon = document.createElement('span');
+            answer3Contaniner.insertAdjacentElement('beforeend', icon);
+
+            if(correctAnswer == answerShuffled[2]) {
+                answer3Contaniner.classList.toggle('correct');
+                icon.classList.toggle('correctLogo');
+            } else {
+                answer3Contaniner.classList.add('incorrect');
+                icon.classList.add('incorrectLogo');
+                answerShuffled.forEach(element => {
+                    // if(correctAnswer == element){
+                    //     element.classList.add('correct');
+                    // }
+                });
+
+            }
+        })
+
+        answer4Contaniner.addEventListener('mousedown', function isCorrect(){
+            questionsContainer.style.height = '559px';
+            const btn = document.createElement('button');
+            btn.innerText = 'Next'
+            btn.classList.add('nextButton', 'font');
+            questionsContainer.insertAdjacentElement('beforeend', btn);
+            const icon = document.createElement('span');
+            answer4Contaniner.insertAdjacentElement('beforeend', icon);
+
+            if(correctAnswer == answerShuffled[3]) {
+                answer4Contaniner.classList.toggle('correct');
+                icon.classList.toggle('correctLogo');
+            } else {
+                answer4Contaniner.classList.add('incorrect');
+                icon.classList.add('incorrectLogo');
+                answerShuffled.forEach(element => {
+                    // if(correctAnswer == element){
+                    //     element.classList.add('correct');
+                    // }
+                });
+
+            }
         })
 
       

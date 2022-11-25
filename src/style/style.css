@@ -116,15 +116,15 @@
     width: 20px;
     height: 20px;
     color: var(--color-title);
-    margin-left: 180px;
+    margin-left: 190px;
 }
 .correctLogo{
+    display: inline-block;
     background-image: url('../logo/check_circle_FILL0_wght400_GRAD0_opsz48.svg');
     background-size: 20px;
     width: 20px;
     height: 20px;
-    color: var(--color-title);
-    margin-left: 180px;
+    margin-left: 190px;
 }
 .nextButton {
     align-self: end;
