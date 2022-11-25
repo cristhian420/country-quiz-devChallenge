@@ -2,11 +2,11 @@
 const APIGeography = "https://the-trivia-api.com/api/questions?categories=geography&limit=1&difficulty=easy";
 const content = document.getElementById('content');
 const questionTitle = document.getElementById('question-title');
-const answerA = document.getElementById('answer-A');
-const answerB = document.getElementById('answer-B');
-const answerC = document.getElementById('answer-C');
-const answerD = document.getElementById('answer-D');
-
+const answer1 = document.getElementById('answer-1');
+const answer2 = document.getElementById('answer-2');
+const answer3 = document.getElementById('answer-3');
+const answer4 = document.getElementById('answer-4');
+console.log(answer1);
 const fetchData = async (urlApi) => {
     const response = await fetch(urlApi);
     const data = await response.json();
@@ -22,19 +22,29 @@ const fetchData = async (urlApi) => {
         ])
         .flat();
         const correctAnswer = questions.map(question => question.correctAnswer);
-        console.log(answers)
         let answerShuffled = answers.sort(() => Math.random()-0.5)
         console.log(answerShuffled)
         questionTitle.innerText = questions[0].question;
-        content.innerHTML = `
-        <div class="answer font"><span class="letter-A">A</span><span id="answer-A" class="answer-A">${answerShuffled[0]}</span></div>
-        <div class="answer font"><span class="letter-B">B</span><span id="answer-B" class="answer-B">${answerShuffled[1]}</span></div>
-        <div class="answer font"><span class="letter-C">C</span><span id="answer-C" class="answer-C">${answerShuffled[2]}</span></div>
-        <div class="answer font"><span class="letter-D">D</span><span id="answer-D" class="answer-D">${answerShuffled[3]}</span></div>
-        `;
-        console.log(correctAnswer)
+        answer1.innerText = answerShuffled[0];
+        answer2.innerText = answerShuffled[1];
+        answer3.innerText = answerShuffled[2];
+        answer4.innerText = answerShuffled[3];
+
+        console.log(correctAnswer);
+        console.log(answerShuffled[3]);
+        console.log(correctAnswer == answerShuffled[3])
+        console.log(answer1);
 
     } catch (error) {
         throw new Error(error)
     }
-})();
+}
+
+
+)();
+
+
+
+const isCorrect = (answerChoseen) => {
+    correctAnswer === [answerChoseen]
+}

@@ -54,12 +54,12 @@
 .question-title {
     width: 373px;
     height: 36px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 36px;
     color: var(--color-dark);
     text-align: center;
     align-self: center;
-    margin: 68px auto 32px auto;
+    margin: 68px auto 55px auto;
 }
 .answer-container {
     display: flex;
