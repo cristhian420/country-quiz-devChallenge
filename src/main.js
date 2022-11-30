@@ -47,6 +47,8 @@ const fetchData = async (urlApi) => {
 
             if(correctAnswer == answerShuffled[0]) {
                 answer1Contaniner.classList.toggle('correct');
+                answer1Contaniner.classList.remove('answer');
+                answer1Contaniner.classList.add('answerNoHover');
                 icon.classList.add('correctLogo');
                 answer1Contaniner.insertAdjacentElement('beforeend', icon);
             } else {       
@@ -68,6 +70,15 @@ const fetchData = async (urlApi) => {
                     icon.classList.add('correctLogo');
                 }
             }
+
+            answer1Contaniner.classList.remove('answer');
+            answer1Contaniner.classList.add('answerNoHover');
+            answer2Contaniner.classList.remove('answer');
+            answer2Contaniner.classList.add('answerNoHover');
+            answer3Contaniner.classList.remove('answer');
+            answer3Contaniner.classList.add('answerNoHover');
+            answer4Contaniner.classList.remove('answer');
+            answer4Contaniner.classList.add('answerNoHover');
         })
 
         answer2Contaniner.addEventListener('mousedown', function isCorrect(){

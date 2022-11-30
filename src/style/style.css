@@ -85,7 +85,23 @@
     color: var(--color-light);
     display: flex;
     align-items: center;
-    cursor: url(./logo/pan_tool_alt_FILL0_wght400_GRAD0_opsz48.svg) 21 8, move;
+    cursor: url(../logo/pan_tool_alt_FILL0_wght400_GRAD0_opsz48.svg) 21 8, move;
+}
+.answerNoHover{
+    box-sizing: border-box;
+    width: 400px;
+    height: 56px;
+    background: #FFFFFF;
+    border: 2px solid var(--color-light);
+    border-radius: 12px;
+    margin-bottom: 31px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    cursor: no-drop;
 }
 .answer:nth-child(1) {
     margin-bottom: 25px;
@@ -137,5 +153,5 @@
     border-radius: 12px;
     line-height: 27px;
     color: var(--color-title);
-    cursor: url(./logo/pan_tool_alt_FILL0_wght400_GRAD0_opsz48.svg) 21 8, move;
+    cursor: url('../logo/pan_tool_alt_FILL0_wght400_GRAD0_opsz48.svg') 21 8, move;
 }
