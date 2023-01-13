@@ -8,6 +8,7 @@ const questionsContainer = document.querySelector('.questions-container');
 const answer2Contaniner = document.getElementById('answerCont2');
 const answer3Contaniner = document.getElementById('answerCont3');
 const answer4Contaniner = document.getElementById('answerCont4');
+const scoreApp = document.getElementById('score')
 
 let currentQuestion = [];
 let score = 0;
@@ -26,12 +27,14 @@ const showQuestion = async () => {
     ])
     .flat()
     .sort(() => Math.random()-0.5);
-    
+    const correctAnswer = quiz[0].correctAnswer;
+    const indexCorrectAnswer = answers.indexOf(correctAnswer);
     questionTitle.innerText = quiz[0].question;
 
     for (let i = 0; i < answers.length; i++) {
         const container = document.createElement('div');
         container.classList.add('answer', 'font');
+        container.id = 'answerCont-' + [i];
         const number = document.createElement('span');
         number.classList.add('number-' + [i]);
         number.innerText = [i+1];
@@ -40,16 +43,51 @@ const showQuestion = async () => {
         answerText.innerText = answers[i];
         container.appendChild(number);
         container.appendChild(answerText);
+        // container.onclick = checkAnswers();
         content.appendChild(container);
     }
+    questionsContainer.addEventListener('click', function(event) {
+        let texto = event.target.innerText;
+        console.log(texto);
+        const container = `answerCont-${indexCorrectAnswer}`;
+        const containerCorrect = document.getElementById(container);
+        const currentAnswer = document.getElementById(event.target.id)
+
+
+        if (texto.includes(correctAnswer) || texto.includes(indexCorrectAnswer+1)) {
+            containerCorrect.classList.add('correct');
+            score ++;
+
+            questionsContainer.style.height = '559px';
+            const btn = document.createElement('button');
+            btn.innerText = 'Next'
+            btn.classList.add('nextButton', 'font');
+            questionsContainer.insertAdjacentElement('beforeend', btn);
+            const icon = document.createElement('span');
+            icon.classList.add('correctLogo')
+            // scoreApp.innerText = score;
+            // btn.onclick = showQuestion();
+        } else {
+            currentAnswer.classList.add('incorrect')
+            containerCorrect.classList.add('correct')
+        }
+    })
 }
 
 
-const checkAnswers = async () => {
+
+const checkAnswers = async (answer) => {
     const data = await fetchData();
     const correctAnswer = data[0].correctAnswer;
+    questionsContainer.addEventListener('click', function(event) {
+        console.log(event);
+        if (event.target.innerText === correctAnswer ) {
+            console.log(event.path[0].classList.add('correct'));
+        }
+    })
 }
- 
+
+
 
 
 (async () => {
@@ -224,13 +262,12 @@ const checkAnswers = async () => {
                 answer4Contaniner.classList.remove('answer');
                 answer4Contaniner.classList.add('answerNoHover');
             }
-            questionsContainer.addEventListener('click', (event) => {
-                if(event.target.id === 'answerCont1') checkAnswer1()
-                if(event.target.id === 'answerCont2') checkAnswer2()
-                if(event.target.id === 'answerCont3') checkAnswer3()
-                if(event.target.id === 'answerCont4') checkAnswer4()
-                console.log(score);
-            })
+            // questionsContainer.addEventListener('click', (event) => {
+            //     if(event.target.id === 'answerCont1') checkAnswer1()
+            //     if(event.target.id === 'answerCont2') checkAnswer2()
+            //     if(event.target.id === 'answerCont3') checkAnswer3()
+            //     if(event.target.id === 'answerCont4') checkAnswer4()
+            // })
 
         
     } catch (error) {
